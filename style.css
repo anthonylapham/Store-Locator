@@ -7,4 +7,10 @@ h3{
 #map {
  height: 400px;
  width: 100%;
+
+}
+
+#search{
+  color: white;
+  font-size: 20px;
 }
