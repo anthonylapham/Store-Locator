@@ -6,7 +6,8 @@ body{
 h3{
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
+  font-family: impact;
 }
 #map {
  height: 545px;
@@ -23,4 +24,22 @@ h3{
   color: white;
   font-size: 20px;
   text-align: center;
+}
+
+#location{
+  color: black;
+}
+
+#store{
+  color: black;
+}
+
+#radius{
+  color: black;
+}
+
+#srchBtn{
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-weight: bolder;
 }
