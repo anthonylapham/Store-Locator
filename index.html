@@ -10,7 +10,7 @@
 
 <body>
   <h3><u>Grocery Store Locator</u></h3>
-  <div id="search"><label for="location">Search Location:</label><input type="text" id="location"><label for="store">Store:</label></input><input type="text" id="store"><label for="radius">Radius:</label></input><input type="text" id="radius"></input><button class="btn btn-primary"
+  <div id="search"><label for="location">Search Location:</label><input type="text" id="location"><label for="store">Store:</label></input><input type="text" id="store" name="myStore" list="myStores"><datalist id="myStores"><option value="Aldi"><option value="Costco"><option value="Kroger"><option value="Meijer"><option value="Trader Joe's"><option value="Walmart"><option value="Whole Foods"></datalist><label for="radius">Radius:</label></input><input type="text" id="radius"></input><button class="btn btn-primary"
       id="srchBtn">Search</button></div>
   <div id="map"></div>
   <script>
@@ -27,6 +27,12 @@
         position: uluru,
         map: map
       });
+
+      marker.addListener('click', function(){
+        alert('Marker was clicked!');
+      });
+
+
     }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFO3edLwF65-NUZmVc5Fu8-lthmHoQGFo
