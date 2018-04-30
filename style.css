@@ -1,45 +1,46 @@
-body{
+body {
   background-image: url("http://www.tokkoro.com/picsup/2391201-dark-brown-scratched-wooden-cutting-board-wood-texture-background.jpg");
   background-repeat: no-repeat;
   background-size: 1500px;
 }
-h3{
+
+h3 {
   color: white;
   text-align: center;
   font-size: 35px;
   font-family: impact;
 }
-#map {
- height: 545px;
- width: 50%;
- position: absolute;
- left: 350px;
- border: 25px;
- border-style: solid;
- border-image: url("http://aridagriculture.com/wp-content/uploads/2017/10/Classification-of-Vegetables-612x330.jpg") 50 round;
 
+#map {
+  height: 545px;
+  width: 50%;
+  position: absolute;
+  left: 350px;
+  border: 25px;
+  border-style: solid;
+  border-image: url("http://aridagriculture.com/wp-content/uploads/2017/10/Classification-of-Vegetables-612x330.jpg") 50 round;
 }
 
-#search{
+#search {
   color: white;
   font-size: 20px;
   text-align: center;
   font-family: Tahoma;
 }
 
-#location{
+#location {
   color: black;
 }
 
-#store{
+#store {
   color: black;
 }
 
-#radius{
+#radius {
   color: black;
 }
 
-#srchBtn{
+#srchBtn {
   margin-left: 10px;
   margin-bottom: 5px;
   font-weight: bolder;

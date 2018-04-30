@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -10,8 +11,10 @@
 
 <body>
   <h3><u>Grocery Store Locator</u></h3>
-  <div id="search"><label for="location">Search Location:</label><input type="text" id="location"><label for="store">Store:</label></input><input type="text" id="store" name="myStore" list="myStores"><datalist id="myStores"><option value="Aldi"><option value="Costco"><option value="Kroger"><option value="Meijer"><option value="Trader Joe's"><option value="Walmart"><option value="Whole Foods"></datalist><label for="radius">Radius:</label></input><input type="text" id="radius"></input><button class="btn btn-primary"
-      id="srchBtn">Search</button></div>
+  <div id="search"><label for="location">Search Location:</label><input type="text" id="location"><label for="store">Store:</label></input><input type="text" id="store" name="myStore" list="myStores"><datalist id="myStores"><option value="Aldi"><option value="Costco"><option value="Kroger"><option value="Meijer"><option value="Trader Joe's"><option value="Walmart"><option value="Whole Foods"></datalist>
+    <label
+      for="radius">Radius:</label>
+      </input><input type="text" id="radius"></input><button class="btn btn-primary" id="srchBtn">Search</button></div>
   <div id="map"></div>
   <script>
     function initMap() {
@@ -28,7 +31,7 @@
         map: map
       });
 
-      marker.addListener('click', function(){
+      marker.addListener('click', function() {
         alert('Marker was clicked!');
       });
 
