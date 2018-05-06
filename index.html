@@ -16,11 +16,12 @@
       for="radius">Radius:</label>
     </input><input type="text" id="radius" name="mile" list="mileRadius"><datalist id="mileRadius"><option value="5 miles"><option value="10 miles"><option value="20 miles"><option value="30 miles"><option value="40 miles"><option value="50 miles"></datalist></input><button class="btn btn-primary" id="srchBtn">Search</button></div>
   <div id="map"></div>
+  <div id="info_div"></div>
   <script>
     function initMap() {
       var uluru = {
-        lat: 39.940230,
-        lng: -84.231945
+        lat: 39.758948,
+        lng: -84.191607
       };
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
@@ -31,15 +32,61 @@
         map: map
       });
 
+    /* var stores =[
+        {
+          name: 'Kroger',
+          location: {lat:39.797351:, long:-84.245920},
+          hours: 'Sunday: 8:00 AM-Midnight, Monday-Friday: 6:00 AM-Midnight'
+        },
+        {
+          name: 'Kroger',
+          location: {lat:39.819535, lon:-84.200536},
+          hours: 'Sunday-Saturday: 6:00 AM-11:00 PM'
+        },
+        {
+          name: 'Kroger',
+          location: {lat:39.863047, lon:-84.313886},
+          hours: 'Sunday-Saturday 5:00 AM-1:00 AM'
+        },
+        {
+          name: 'Walmart',
+          location: {lat:39.858313, lon:-84.212111},
+          hours:'Open 24 Hours'
+        }
+      ]
+
+    /*  //makes new markers for each store in the stores variable
+      function markStore(storeInfo){
+        var marker= new google.maps.marker({
+          map: map,
+          postion: storeInfo.location,
+          title: storeInfo.name
+        });
+      }
+
+      //shows store information when clicked
       marker.addListener('click', function() {
-        alert('Marker was clicked!');
+        showStoreInfo(storeInfo);
       });
+
+      //maps through stores variable to get data for markStore function to display
+      stores.forEach(function(store){
+        markStore(store);
+      });
+
+      //sets how the store information will display when being clicked on
+      function showStoreInfo(storeInfo){
+        var info_div= document.getElementById('info_div');
+        info_div.innerHTML = 'Store name: '
+        + storeInfo.name
+        + '<br>Hours: ' + storeInfo.hours;
+      }*/
 
 
     }
+
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFO3edLwF65-NUZmVc5Fu8-lthmHoQGFo
-&callback=initMap">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFO3edLwF65-NUZmVc5Fu8-lthmHoQGFo&callback=initMap">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="/js/jquery.balloon.js"></script>
