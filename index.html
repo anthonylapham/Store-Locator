@@ -52,6 +52,26 @@
           name: 'Kroger',
           location: {lat:39.817225, lng:-84.125538},
           hours: 'Sunday-Saturday: 5:00 AM-1:00 AM'
+        },
+        {
+          name: 'Meijer',
+          location: {lat:39.857576, lng:-84.275959},
+          hours: '24 Hours a day, 364 days a year'
+        },
+        {
+          name: 'Meijer',
+          location: {lat:39.868964,lng:-84.103101},
+          hours: '24 Hours a day, 364 days a year'
+        },
+        {
+          name: 'Meijer',
+          location: {lat:39.777390,lng:-84.073723},
+          hours: '24 hours a day, 364 days a year'
+        },
+        {
+          name: 'Aldi',
+          location: {lat:39.861225, lng:-84.281481},
+          hours: '9:00 AM-9:00 PM Monday-Friday, 9:00 AM-8:00 PM Saturday & Sunday'
         }
       ];
       //marker function that shows stores on maps
@@ -77,6 +97,9 @@
       stores.forEach(function(store){
         markStore(store);
       });
+
+      //hides the markers on page load
+      $("#"+marker).hide();
 
     }
 
