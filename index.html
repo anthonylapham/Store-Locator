@@ -37,28 +37,43 @@
           name: 'Kroger',
           location: {lat:39.797351,lng:-84.245920},
           hours: 'Sunday: 8:00 AM-Midnight, Monday-Friday 6:00 AM-Midnight'
+        },
+        {
+          name: 'Kroger',
+          location: {lat:39.819535, lng:-84.200536},
+          hours: 'Sunday-Saturday: 6:00 AM-11:00 PM'
+        },
+        {
+          name: 'Kroger',
+          location: {lat:39.863047, lng:-84.313886},
+          hours: 'Sunday-Saturday: 5:00 AM-1:00 AM'
+        },
+        {
+          name: 'Kroger',
+          location: {lat:39.817225, lng:-84.125538},
+          hours: 'Sunday-Saturday: 5:00 AM-1:00 AM'
         }
       ];
-
+      //marker function that shows stores on maps
       function markStore(storeInfo){
         var marker = new google.maps.Marker({
           position: storeInfo.location,
           map: map,
-          titiel: storeInfo.name
+          title: storeInfo.name
         });
-
+        //event that displays store information when clicking on the marker
         marker.addListener('click',function(){
           showStoreInfo(storeInfo);
         });
       }
-
+      //function that takes information from the stores variable and puts it in the display
       function showStoreInfo(storeInfo){
         var info_div = document.getElementById('info_div');
         info_div.innerHTML = 'Store name: '
         + storeInfo.name
         + '<br>Hours: ' + storeInfo.hours;
       }
-
+      //maps through the stores variable so that each store shows on the map
       stores.forEach(function(store){
         markStore(store);
       });
