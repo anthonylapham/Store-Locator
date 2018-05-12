@@ -24,7 +24,7 @@
         lng: -84.191607
       };
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: 10,
         center: uluru
       });
       var marker = new google.maps.Marker({
@@ -72,6 +72,16 @@
           name: 'Aldi',
           location: {lat:39.861225, lng:-84.281481},
           hours: '9:00 AM-9:00 PM Monday-Friday, 9:00 AM-8:00 PM Saturday & Sunday'
+        },
+        {
+          name: 'Costco',
+          location: {lat:39.663100, lng:-84.105741},
+          hours: 'Monday-Friday: 10:00 AM-8:30 PM, Saturday: 9:30 AM-6:00 PM, Sunday: 10:00 AM-6:00 PM'
+        },
+        {
+          name: 'Whole Foods',
+          location: {lat:39.626900, lng:-84.190054},
+          hours: 'Sunday-Thursday: 8:00 AM-9:00 PM , Friday-Saturday: 8:00 AM-10:00 PM'
         }
       ];
       //marker function that shows stores on maps
