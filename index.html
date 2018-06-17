@@ -11,18 +11,44 @@
 
 <body>
   <h3><u>Grocery Store Locator</u></h3>
-  <div id="search"><label for="location">Search Location:</label><input type="text" id="location"><label for="store">Store:</label></input><input type="text" id="store" name="myStore" list="myStores"><datalist id="myStores"><option value="Aldi"><option value="Costco"><option value="Kroger"><option value="Meijer"><option value="Trader Joe's"><option value="Walmart"><option value="Whole Foods"></datalist>
-    <label
-      for="radius">Radius:</label>
-    </input><input type="text" id="radius" name="mile" list="mileRadius"><datalist id="mileRadius"><option value="5 miles"><option value="10 miles"><option value="20 miles"><option value="30 miles"><option value="40 miles"><option value="50 miles"></datalist></input><button class="btn btn-primary" id="srchBtn">Search</button></div>
+  <div id="search">
+    <label for="location">Search Location:</label>
+    <input type="text" id="location" />
+
+    <label for="store">Store:</label>
+    <input type="text" id="store" name="myStore" list="myStores">
+      <datalist id="myStores"></option>
+        <option value="Aldi"></option>
+        <option value="Costco"></option>
+        <option value="Kroger"></option>
+        <option value="Meijer"></option>
+        <option value="Trader Joe's"></option>
+        <option value="Walmart"></option>
+        <option value="Whole Foods"></option>
+      </datalist>
+    </input>
+
+    <label for="radius">Radius:</label>
+    <input type="text" id="radius" name="mile" list="mileRadius">
+      <datalist id="mileRadius"></option>
+        <option value="5 miles"></option>
+        <option value="10 miles"></option>
+        <option value="20 miles"></option>
+        <option value="30 miles"></option>
+        <option value="40 miles"></option>
+        <option value="50 miles"></option>
+      </datalist>
+    </input>
+
+    <button class="btn btn-primary" id="srchBtn">Search</button>
+  </div>
   <div id="map"></div>
   <div id="info_div"></div>
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFO3edLwF65-NUZmVc5Fu8-lthmHoQGFo&callback=initMap"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-  <script src="https://use.fontawesome.com/a49c728090.js"></script>
   <script src="script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFO3edLwF65-NUZmVc5Fu8-lthmHoQGFo&callback=initMap"></script>
+  <script src="https://use.fontawesome.com/a49c728090.js"></script>
 </body>
 
 </html>
