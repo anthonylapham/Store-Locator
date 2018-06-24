@@ -73,6 +73,8 @@ var stores = [
 
 function initMap() {
 
+  const allMarkers = [];
+
   var uluru = {
     lat: 39.758948,
     lng: -84.191607
@@ -84,17 +86,20 @@ function initMap() {
   });
 
   //marker function that shows stores on maps
-  function markStore(storeInfo) {
-    var marker = new google.maps.Marker({
+  function markStore(storeInfo, map = null) {
+    const marker = new google.maps.Marker({
       position: storeInfo.location,
-      map: map,
+      map,
       title: `${storeInfo.name} -- Hours: ${storeInfo.hours}`,
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.DROP,
+      store: storeInfo.name
     });
     //event that displays store information when clicking on the marker
     marker.addListener('click',function(){
       showStoreInfo(storeInfo);
     });
+
+    allMarkers.push(marker)
   }
 
   //function that takes information from the stores variable and puts it in the display
@@ -105,22 +110,23 @@ function initMap() {
     + '<br>Hours: ' + storeInfo.hours;
   }
 
-  //maps through the stores variable so that each store shows on the map
-  // stores.forEach(function(store){
-  //   markStore(store);
-  // });
-
-}
-
-$(document).ready(function() {
-  initMap();
+  stores.forEach(store => {
+    markStore(store);
+  });
 
   // When a user selects something new
   $('#store').on('change', function(e) {
-    stores
-      .filter(store => store.name === this.value)
-      .forEach(store => {
-        markStore(store);
-      });
+    allMarkers.forEach(marker => {
+      if (marker.store === this.value) {
+        marker.setMap(map);
+      } else {
+        marker.setMap(null);
+      }
+    });
+    // stores
+    //   .filter(store => store.name === this.value)
+    //   .forEach(store => {
+    //     markStore(store);
+    //   });
   });
-});
+}
